@@ -169,7 +169,7 @@ class Ussd:
 
    def share_data(self):
       num = int(input('Input others number: '))
-      if num > 9 and num < 9:
+      if len(num)!= 11:
          print('Pls check the number again')
          self.dashbord
       else:
@@ -208,7 +208,7 @@ class Ussd:
          print(f'You have recived{ amount} mb.\n Continue browsing till kingdom come.')
          self.dashbord()
 
-app = Ussd()
+# app = Ussd()
 # app.dashbord()
 
 class calc:
@@ -248,8 +248,44 @@ class calc:
       else:
          self.home()
 
-cal = calc()
-cal.home()
+# cal = calc()
+# cal.home()
+
+#                                     parametized class
+class Human:
+   def __init__(self, name):
+      self.name = name
+   def introduce(self):
+      print(f'My name is {self.name}')
+name = input('Name: ')
+# ayo = Human()
+# ayo.introduce()
+
+class Human():
+   def __init__(self):
+      self.name = input('name: ')
+   def introduce(self):
+      print(f'My name is {self.name}')
+# ayo= Human()
+# ayo.introduce()
+
+                                             # Inheritance
+class Parent:
+   def __init__(self):
+      self.surname = 'Tinubu'
+      self.firstname = 'Ahmed'
+      self.hobby = 'Playing golf'
+      
+   def introduce(self):
+      print(f'My name is {self.firstname} {self.surname}. I love {self.hobby}')
+father = Parent()
+father.introduce()
+
+
+      
+
+
+      
 
 
 

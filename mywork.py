@@ -67,7 +67,7 @@ class Ussd:
 
    def share_data(self):
       num = int(input('Input others number: '))
-      if num > 9 and num < 9:
+      if len(num) != 11:
          print('Pls check the number again')
          self.dashbord
       else:
